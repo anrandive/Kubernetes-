@@ -1,0 +1,23 @@
+﻿apiVersion: apps/v1
+kind: Deployment
+metadata:
+   labels:
+      name: nginx
+   name: nginx
+   namespace: default  
+spec:  
+  replicas: 2
+  selector: 
+    matchLabels:
+        run: nginx
+        owner: nitin   
+  template:
+    metadata:
+      labels:
+        run: nginx
+        owner: nitin
+      name: nginx
+    spec:
+      containers:
+      - image: nginx
+        name: nginx
