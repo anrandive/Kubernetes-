@@ -1,0 +1,3 @@
+﻿kubectl.exe exec  envar-demo -- sh -c 'echo '
+kubectl.exe run sleeper --image ubuntu --dry-run=client -o yaml -- sh -c "echo
+This is my command" >pod.yaml
